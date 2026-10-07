@@ -12,7 +12,7 @@ let package = Package(
   dependencies: [
     .package(url: "https://github.com/Stygian-Tech/atproto-auth-kit.git", revision: "5ad645d14203b19e6d6077b2fb05cec12519d208"),
     .package(url: "https://github.com/Stygian-Tech/gateway-trust-kit.git", revision: "b1508e6bc5f5224aa440304f15365a4a2fdc7596"),
-    .package(url: "https://github.com/Stygian-Tech/thin-app-view-core.git", revision: "3e09f9654961e65e0abf42f554622c9ebb77108d"),
+    .package(url: "https://github.com/Stygian-Tech/thin-app-view-core.git", revision: "3b8523ecb1c673c06674ecf27acc225d7d35331a"),
     .package(url: "https://github.com/Stygian-Tech/operations-core.git", revision: "a3b7bb328189a423f3e2d2fdd1dcfd4022faddc1"),
     .package(url: "https://github.com/Stygian-Tech/social-wire-redis.git", revision: "313305b98919ac8075313044b6d867c13650a329"),
     .package(url: "https://github.com/hummingbird-project/hummingbird.git", from: "2.6.0"),
