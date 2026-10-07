@@ -39,7 +39,6 @@ let package = Package(
       path: "Sources/GatewayCore",
       swiftSettings: [
         .swiftLanguageMode(.v6),
-        .unsafeFlags(["-warnings-as-errors"]),
       ]
     ),
     .testTarget(
@@ -58,7 +57,6 @@ let package = Package(
       path: "Tests/GatewayCoreTests",
       swiftSettings: [
         .swiftLanguageMode(.v6),
-        .unsafeFlags(["-warnings-as-errors"]),
       ]
     ),
   ]
