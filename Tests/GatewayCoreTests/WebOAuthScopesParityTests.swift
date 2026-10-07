@@ -6,17 +6,13 @@ import Testing
 @Suite("ATProtoOAuthScopes parity")
 struct WebOAuthScopesParityTests {
   private func repoPublicClientMetadataURL() throws -> URL {
-    // …/packages/swift/GatewayCore/Tests/GatewayCoreTests/<this file>.swift → repo root
+    // The reviewed public client metadata is bundled for standalone parity tests.
     URL(fileURLWithPath: #filePath)
-      .deletingLastPathComponent() // GatewayCoreTests
-      .deletingLastPathComponent() // Tests
-      .deletingLastPathComponent() // GatewayCore
-      .deletingLastPathComponent() // swift
-      .deletingLastPathComponent() // packages
-      .deletingLastPathComponent() // repo root (the-social-wire)
-      .appending(component: "apps")
-      .appending(component: "web")
-      .appending(component: "public")
+      .deletingLastPathComponent()
+      .deletingLastPathComponent()
+      .deletingLastPathComponent()
+      .appending(component: "TestSupport")
+      .appending(component: "ClientMetadata")
       .appending(component: "client-metadata.json")
   }
 

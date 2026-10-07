@@ -70,5 +70,8 @@
     "Tests/GatewayCoreTests/RequestTraceMiddlewareTests.swift": "fcab622df2ec2328acb9f52b54f14468884fdc405a954211a2035993be18191b",
     "Tests/GatewayCoreTests/WebOAuthClientMetadataTests.swift": "e28063fe29097ee017629f6b02c312f99816d6fcdf8e6fccb94dcb7462db62f4",
     "Tests/GatewayCoreTests/WebOAuthScopesParityTests.swift": "3338306aea6a3668059aab99694cbd802c3a280e8db5f1ebd157f8186d2b58a5"
+  },
+  "modifiedPaths": {
+    "Tests/GatewayCoreTests/WebOAuthScopesParityTests.swift": "Only source metadata fixture path changed to bundled exact public client metadata snapshot."
   }
 }
