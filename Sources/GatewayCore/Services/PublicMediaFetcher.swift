@@ -4,6 +4,27 @@ import NIOCore
 
 /// Bounded public source fetch with address pinning and validation on every redirect.
 public enum PublicMediaFetcher {
+  /// One public HTTPS exchange with pinned DNS and no redirect following. The
+  /// caller owns body bounds and must join shutdown of the returned client.
+  public static func open(url: String, httpClient: HTTPClient, timeout: TimeAmount, headers: [String: String] = [:]) async throws -> (response: HTTPClientResponse, client: HTTPClient) {
+    guard let components = URLComponents(string: url), let host = components.host,
+      components.scheme == "https", components.user == nil, components.password == nil
+    else { throw PDSAccessTokenAttestationError.invalid }
+    let address = try await PublicDNSAddressValidator.validatedAddress(for: url)
+    var configuration = HTTPClient.Configuration()
+    configuration.dnsOverride = [host: address]
+    configuration.redirectConfiguration = .disallow
+    configuration.timeout = .init(connect: .seconds(10), read: timeout)
+    let client = HTTPClient(eventLoopGroup: httpClient.eventLoopGroup, configuration: configuration)
+    do {
+      var request = HTTPClientRequest(url: url)
+      for (name, value) in headers { request.headers.add(name: name, value: value) }
+      return (try await client.execute(request, timeout: timeout), client)
+    } catch {
+      try? await client.shutdown()
+      throw error
+    }
+  }
   public static func stream(url: String, httpClient: HTTPClient, range: String?) async throws -> (
     response: HTTPClientResponse, client: HTTPClient
   ) {
