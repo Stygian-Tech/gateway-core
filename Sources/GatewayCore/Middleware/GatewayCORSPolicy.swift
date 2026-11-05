@@ -80,6 +80,7 @@ public enum GatewayCORSPolicy {
         dpopHeader, requestIdHeader, traceparentHeader, idempotencyKeyHeader, lastEventIdHeader,
         upstreamDpopHeader, sessionDpopHeader, latrGatewayDpopHeader, wireModerationDpopHeader,
         circleGraphDpopHeader,
+        HTTPField.Name("X-Social-Draft-Upload-Id")!,
         attestationReceiptHeader, attestationRequiredHeader, upstreamPreparedHeader,
       ],
       allowMethods: [.get, .post, .put, .patch, .delete, .head, .options],
@@ -90,6 +91,7 @@ public enum GatewayCORSPolicy {
   }
 
   private static let exposedHeaderNames = [
+    "Server-Timing", "X-Request-ID",
     ATProtoSessionDPoP.nonceHeaderName,
     ATProtoSessionAttestationReceipt.receiptHeaderName,
     ATProtoSessionAttestationReceipt.requiredHeaderName,
