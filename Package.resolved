@@ -1,5 +1,5 @@
 {
-  "originHash" : "3cc139365ca0c89340147cc50ab9727e1d04d9800d6f195ff10bcca9abf746d9",
+  "originHash" : "4be7534bc01a48a5f021c21f746ab285c8571627050b3f16e0c3220d1248ebd1",
   "pins" : [
     {
       "identity" : "async-http-client",
@@ -63,6 +63,14 @@
       }
     },
     {
+      "identity" : "operations-core",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Stygian-Tech/operations-core.git",
+      "state" : {
+        "revision" : "a3b7bb328189a423f3e2d2fdd1dcfd4022faddc1"
+      }
+    },
+    {
       "identity" : "postgres-nio",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/postgres-nio.git",
@@ -78,6 +86,14 @@
       "state" : {
         "revision" : "8c4ce10883e405cdbde52855f97f1ec9468c889b",
         "version" : "1.6.3"
+      }
+    },
+    {
+      "identity" : "social-wire-redis",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Stygian-Tech/social-wire-redis.git",
+      "state" : {
+        "revision" : "313305b98919ac8075313044b6d867c13650a329"
       }
     },
     {
@@ -276,6 +292,14 @@
       "state" : {
         "revision" : "7c6ad0fc39d0763e0b699210e4124afd5041c5df",
         "version" : "1.6.4"
+      }
+    },
+    {
+      "identity" : "thin-app-view-core",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Stygian-Tech/thin-app-view-core.git",
+      "state" : {
+        "revision" : "ffa868f979283cff6ce207e0dbb422ff2ea45136"
       }
     }
   ],
