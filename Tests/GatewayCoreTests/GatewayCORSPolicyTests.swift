@@ -90,6 +90,7 @@ struct GatewayCORSPolicyTests {
       response.headers[HTTPField.Name(ATProtoSessionDPoP.nonceHeaderName)!] == "pds-nonce"
     )
     for headerName in [
+      "Server-Timing", "X-Request-ID",
       ATProtoSessionAttestationReceipt.receiptHeaderName,
       ATProtoSessionAttestationReceipt.requiredHeaderName,
       ATProtoSessionAttestationReceipt.upstreamPreparedHeaderName,
@@ -102,6 +103,7 @@ struct GatewayCORSPolicyTests {
       headers[.origin] = "https://testing.thesocialwire.app"
       headers[.accessControlRequestMethod] = "POST"
       headers[.accessControlRequestHeaders] = [
+        "X-Social-Draft-Upload-Id",
         ATProtoSessionAttestationReceipt.receiptHeaderName,
         ATProtoSessionAttestationReceipt.requiredHeaderName,
         ATProtoSessionAttestationReceipt.upstreamPreparedHeaderName,
@@ -112,6 +114,7 @@ struct GatewayCORSPolicyTests {
       try await client.execute(uri: "/protected", method: .options, headers: preflightHeaders)
     }
     for headerName in [
+      "X-Social-Draft-Upload-Id",
       ATProtoSessionAttestationReceipt.receiptHeaderName,
       ATProtoSessionAttestationReceipt.requiredHeaderName,
       ATProtoSessionAttestationReceipt.upstreamPreparedHeaderName,

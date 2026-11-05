@@ -1,5 +1,5 @@
 {
-  "originHash" : "3cc139365ca0c89340147cc50ab9727e1d04d9800d6f195ff10bcca9abf746d9",
+  "originHash" : "2323a7e0082c0915b337aa2242016f42fd70aa1f983c7754e75192d24852e11a",
   "pins" : [
     {
       "identity" : "async-http-client",
@@ -63,6 +63,14 @@
       }
     },
     {
+      "identity" : "operations-core",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Stygian-Tech/operations-core.git",
+      "state" : {
+        "revision" : "a3b7bb328189a423f3e2d2fdd1dcfd4022faddc1"
+      }
+    },
+    {
       "identity" : "postgres-nio",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/postgres-nio.git",
@@ -78,6 +86,14 @@
       "state" : {
         "revision" : "8c4ce10883e405cdbde52855f97f1ec9468c889b",
         "version" : "1.6.3"
+      }
+    },
+    {
+      "identity" : "social-wire-redis",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Stygian-Tech/social-wire-redis.git",
+      "state" : {
+        "revision" : "b47429ade063d837039a0a144379200bc0487401"
       }
     },
     {
@@ -252,6 +268,14 @@
       }
     },
     {
+      "identity" : "swift-secp256k1",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/21-DOT-DEV/swift-secp256k1.git",
+      "state" : {
+        "revision" : "bcd6dd8e615ce243eab7097f213c8c4b39305a2e"
+      }
+    },
+    {
       "identity" : "swift-service-context",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-service-context.git",
@@ -276,6 +300,23 @@
       "state" : {
         "revision" : "7c6ad0fc39d0763e0b699210e4124afd5041c5df",
         "version" : "1.6.4"
+      }
+    },
+    {
+      "identity" : "thin-app-view-core",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Stygian-Tech/thin-app-view-core.git",
+      "state" : {
+        "revision" : "dc0e90186485455db78ad0168d861d0dcc8fcae3"
+      }
+    },
+    {
+      "identity" : "websocket-kit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vapor/websocket-kit.git",
+      "state" : {
+        "revision" : "90bbbdab3ede12c803cfbe91646f291c092517a3",
+        "version" : "2.16.2"
       }
     }
   ],

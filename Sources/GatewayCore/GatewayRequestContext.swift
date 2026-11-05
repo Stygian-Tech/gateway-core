@@ -15,11 +15,16 @@ public struct GatewayRequestContext: RequestContext {
   public var authContext: AuthContext?
   public var requestId: String
   public var traceContext: TraceContext
+  /// Abort blocked request/response I/O when a private transfer reaches its deadline.
+  /// HTTP/2 contexts carry the stream channel, so this closes only that stream.
+  public let closeTransport: @Sendable () -> Void
 
   public init(source: Source) {
     self.coreContext = .init(source: source)
     self.authContext = nil
     self.requestId = UUID().uuidString.lowercased()
     self.traceContext = TraceContext(sampled: false)
+    let channel = source.channel
+    self.closeTransport = { channel.close(promise: nil) }
   }
 }
